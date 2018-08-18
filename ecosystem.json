@@ -1,0 +1,27 @@
+{
+    /**
+     * Application configuration section
+     * http://pm2.keymetrics.io/docs/usage/application-declaration/
+     * 多个服务，依次放到apps对应的数组里
+     */
+    "apps": [
+        // First application
+        {
+            "name": "server-1",
+            "max_memory_restart": "300M",
+            "script": "server/index.js",
+            "out_file": "",
+            "error_file": "",
+            "merge_logs": true,
+            "log_date_format": "YYYY-MM-DD HH:mm Z",
+            "instances": 2,
+            "exec_mode": "cluster",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ]
+}

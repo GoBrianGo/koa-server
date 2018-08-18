@@ -1,0 +1,37 @@
+{
+  "name": "activity-eu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "pm2 start ecosystem-dev.json --env development",
+    "debug": "DEBUG=ioredis:* node server",
+    "build": "node server/build.js",
+    "prod": "PORT=35003 pm2 start ecosystem.json --env production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://172.16.5.203/team-web/activity-eu.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "blueimp-md5": "^2.10.0",
+    "ioredis": "^3.2.2",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "moment": "^2.22.2",
+    "mysql2": "^1.5.3",
+    "pm2": "^2.10.4",
+    "sequelize": "^4.37.10"
+  }
+}
